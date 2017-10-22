@@ -15,15 +15,11 @@ public:
 		for (int i = 1; i < 6 * m; i++)
 		{
 			period.push_back((period[i - 1] + period[i]) % m);
-		/*	temp = k2;
-			k2 += k1;
-			k1 = temp % m;*/
 			if (period[i - 1] % m == 1 && period[i] % m == 1 && i > 3)
 			{
 				period.erase(period.end() - 4, period.end());
 				break;
 			}
-		//	period.push_back(k1 % m);
 		}
 		return period;
 	}
