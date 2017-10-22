@@ -11,7 +11,6 @@ public:
 	static std::vector<ull> get_period(ull m)
 	{
 		std::vector<ull> period{ 0, 1 };
-		ull k1 = 0, k2 = 1, temp;
 		for (int i = 1; i < 6 * m; i++)
 		{
 			period.push_back((period[i - 1] + period[i]) % m);
